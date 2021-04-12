@@ -1,0 +1,48 @@
+<%- include('../includes/head.ejs') %>
+  <%- include('../includes/navbar.ejs') %>
+    <div class="container mx-auto">
+      <div class="card my-4 mx-4">
+        <div class="card-header py-3 text-center">
+          <h1>BIODATA USER</h1>
+        </div>
+        <div class="table-responsive mx-5 mx-sm-0 mx-md-2">
+          <table class="table table-sm table-striped">
+            <table class="table text-center">
+              <thead>
+                <tr class="table-info">
+                  <th scope="col">ID</th>
+                  <th scope="col">Username</th>
+                  <th scope="col">Full Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Password</th>
+                  <th scope="col">History</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <%= bioUser[0].user_id %>
+                  </td>
+                  <td>
+                    <%= bioUser[0].username%>
+                  </td>
+                  <td>
+                    <%= bioUser[0].name %>
+                  </td>
+                  <td>
+                    <%= bioUser[0].email %>
+                  </td>
+                  <td>
+                    <%= bioUser[0].password %>
+                  </td>
+                  <td>
+                    <a href="/history/<%= userId  %>  " class="btn btn-outline-success btn-sm button-update">History</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </table>
+        </div>
+      </div>
+    </div>
+    <%- include('../includes/end.ejs') %>

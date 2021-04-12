@@ -1,0 +1,73 @@
+<%- include('../includes/head.ejs') %>
+  <%- include('../includes/navbar.ejs') %>
+    <div class="row mt-5">
+      <div class="col-md-6 m-auto">
+        <div class="card card-body">
+          <h1 class="text-center mb-3">
+            <i class="fas fa-user-plus"></i> Update Data User
+          </h1>
+          <%- include('../includes/warn.ejs')%>
+            <form action="/users/updateUsers/<%=userId%>" method="POST">
+              <input type="hidden" name="id" id="id" value="id">
+              <div class="form-group">
+                <label for="username">New Username</label>
+                <input type="text" id="username" name="username" class="form-control"
+                  placeholder="Enter New Username" />
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="email">New Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter New Email" />
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="password">New Password</label>
+                <input type="password" id="password" name="password" class="form-control"
+                  placeholder="Enter New Password" />
+              </div>
+              <br>
+              <button type="submit" class="btn btn-primary btn-block">
+                Update Data
+              </button>
+            </form>
+        </div>
+      </div>
+    </div>
+    <%- include('../includes/end.ejs') %>
+      <!-- <div class="modal fade" id="updateUsers" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-100"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Update Data Users Game</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="/users/dashboard?_method=PUT" method="POST">
+        <div class="modal-body">
+          <div class="form-group my-1">
+            <label for="name">Fullname</label>
+            <input type="text" class="form-control name" id="name" name="name" placeholder="Enter Name" required />
+          </div>
+          <div class="form-group my-2">
+            <label for="username">Username</label>
+            <input type="text" class="form-control username" id="username" name="username" placeholder="Enter Username"
+              required />
+          </div>
+          <div class="form-group my-2">
+            <label for="email">Email</label>
+            <input type="email" class="form-control email" id="email" name="email" placeholder="Enter Email" required />
+          </div>
+          <div class="form-group my-2">
+            <label for="password">Password</label>
+            <input type="password" class="form-control password" id="password" name="password"
+              placeholder="Enter Password" required />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-success">Edit Users</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->

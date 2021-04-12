@@ -1,0 +1,48 @@
+<%- include('./includes/head.ejs') %>
+  <div class="row mt-3">
+    <div class="col-md-4 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3">
+          <i class="fas fa-user-plus"></i> Register
+        </h1>
+        <%- include('./includes/warn.ejs')%>
+          <form action="/register" method="POST">
+            <div class="form-group">
+              <label for="name">Fullname</label>
+              <input type="name" id="name" name="name" class="form-control" placeholder="Enter Fullname" />
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" class="form-control" placeholder="Enter Username" />
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" />
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" class="form-control" placeholder="Create Password" />
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="password2">Confirm Password</label>
+              <input type="password" id="password2" name="password2" class="form-control"
+                placeholder="Confirm Password" />
+            </div>
+            <br>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-success btn-block">
+                Register
+              </button>
+            </div>
+          </form>
+          <br>
+          <p class="lead mt-2">Already have an account? <a href="/login">Login</a></p>
+      </div>
+    </div>
+  </div>
+
+  <%- include('./includes/end.ejs') %>
